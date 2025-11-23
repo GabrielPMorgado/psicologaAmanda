@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-500 via-teal-500 to-cyan-400">
+    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-500 via-teal-500 to-cyan-400 py-20 sm:py-0">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -108,13 +108,13 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex justify-center items-center order-1 lg:order-2"
+            className="flex justify-center items-center order-1 lg:order-2 px-4"
           >
-            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+            <div className="w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg">
               <img 
                 src="/images/amanda-morgado.jpg" 
                 alt="Amanda Morgado - Psicóloga Especialista em Autismo"
-                className="w-full h-auto rounded-2xl shadow-2xl"
+                className="w-full h-auto rounded-xl sm:rounded-2xl shadow-2xl"
               />
             </div>
           </motion.div>
