@@ -27,23 +27,23 @@ export default function Header() {
     <header 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/98 shadow-lg backdrop-blur-sm py-4' 
-          : 'bg-transparent py-6'
+          ? 'bg-white/95 shadow-xl backdrop-blur-xl py-4 border-b border-neutral-200' 
+          : 'bg-white/90 backdrop-blur-xl py-6 shadow-sm'
       }`}
     >
       <div className="container-custom">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex flex-col">
-            <h3 className={`text-2xl font-bold transition-colors ${
-              isScrolled ? 'text-primary-500' : 'text-white'
+            <h3 className={`text-2xl font-bold transition-all bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text ${
+              isScrolled ? 'text-transparent' : 'text-white drop-shadow-lg'
             }`}>
               Amanda Morgado
             </h3>
             <span className={`text-sm font-light transition-colors ${
-              isScrolled ? 'text-gray-600' : 'text-white/90'
+              isScrolled ? 'text-neutral-600' : 'text-white/90'
             }`}>
-              Psicóloga
+              Psicóloga Especialista
             </span>
           </div>
 
@@ -54,19 +54,29 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={`font-medium transition-all duration-300 relative group ${
-                  isScrolled ? 'text-gray-700 hover:text-primary-500' : 'text-white hover:text-white/80'
+                  isScrolled ? 'text-neutral-700 hover:text-primary-600' : 'text-white hover:text-white/90'
                 }`}
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-secondary-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
+            <a
+              href="#contato"
+              className={`px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-lg hover:scale-105 ${
+                isScrolled 
+                  ? 'bg-gradient-to-r from-primary-600 to-secondary-600 text-white hover:shadow-xl' 
+                  : 'bg-white text-primary-600 hover:shadow-2xl'
+              }`}
+            >
+              Agendar Consulta
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
             className={`md:hidden text-2xl transition-colors ${
-              isScrolled ? 'text-primary-500' : 'text-white'
+              isScrolled ? 'text-primary-600' : 'text-white'
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >

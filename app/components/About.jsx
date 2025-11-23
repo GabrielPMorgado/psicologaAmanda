@@ -27,7 +27,7 @@ export default function About() {
   ]
 
   return (
-    <section id="sobre" className="py-12 sm:py-16 md:py-20 bg-gray-50">
+    <section id="sobre" className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white via-neutral-50 to-white">
       <div className="container-custom px-4">
         {/* Header */}
         <motion.div
@@ -36,10 +36,10 @@ export default function About() {
           viewport={{ once: true }}
           className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-3 sm:mb-4">
             Sobre Mim
           </h2>
-          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full"></div>
+          <div className="w-16 sm:w-20 h-1.5 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-600 mx-auto rounded-full shadow-lg"></div>
         </motion.div>
 
         {/* Content */}
@@ -52,8 +52,8 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="space-y-4 sm:space-y-6"
           >
-            <p className="text-lg sm:text-xl text-primary-600 font-medium leading-relaxed">
-              Olá! Sou <strong>Amanda Morgado</strong>, psicóloga dedicada ao trabalho com 
+            <p className="text-lg sm:text-xl text-primary-700 font-semibold leading-relaxed">
+              Olá! Sou <strong className="text-primary-600">Amanda Morgado</strong>, psicóloga dedicada ao trabalho com 
               pessoas com Transtorno do Espectro Autista (TEA) e suas famílias.
             </p>
             <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
@@ -89,15 +89,15 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
+                className="bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group border border-neutral-100 hover:border-primary-200"
               >
-                <div className="text-3xl sm:text-4xl text-primary-500 mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center text-white text-2xl sm:text-3xl mb-3 sm:mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                   {item.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-lg sm:text-xl font-bold text-neutral-900 mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base text-neutral-600 leading-relaxed">
                   {item.description}
                 </p>
               </motion.div>

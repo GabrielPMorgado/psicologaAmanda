@@ -53,7 +53,7 @@ export default function Contact() {
   ]
 
   return (
-    <section id="contato" className="py-12 sm:py-16 md:py-20 bg-white">
+    <section id="contato" className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white via-neutral-50 to-white">
       <div className="container-custom px-4">
         {/* Header */}
         <motion.div
@@ -62,10 +62,10 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-3 sm:mb-4">
             Entre em Contato
           </h2>
-          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full mb-4 sm:mb-6"></div>
+          <div className="w-16 sm:w-20 h-1.5 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-600 mx-auto rounded-full shadow-lg mb-4 sm:mb-6"></div>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
             Estou à disposição para esclarecer dúvidas e agendar uma consulta
           </p>
@@ -98,16 +98,16 @@ export default function Contact() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="flex items-center gap-3 sm:gap-4 p-4 sm:p-6 bg-gray-50 rounded-lg sm:rounded-xl hover:bg-primary-500 hover:text-white transition-all duration-300 group cursor-pointer"
+                  className="flex items-center gap-3 sm:gap-4 p-4 sm:p-6 bg-white rounded-lg sm:rounded-xl border border-neutral-200 hover:border-primary-500 hover:shadow-lg transition-all duration-300 group cursor-pointer"
                 >
-                  <div className="text-2xl sm:text-3xl text-primary-500 group-hover:text-white transition-colors flex-shrink-0">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center text-white text-xl sm:text-2xl flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-base sm:text-lg text-gray-900 group-hover:text-white transition-colors">
+                    <h4 className="font-semibold text-base sm:text-lg text-neutral-900 group-hover:text-primary-600 transition-colors">
                       {item.title}
                     </h4>
-                    <p className="text-sm sm:text-base text-gray-600 group-hover:text-white/90 transition-colors">
+                    <p className="text-sm sm:text-base text-neutral-600 transition-colors">
                       {item.info}
                     </p>
                   </div>
@@ -122,7 +122,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             onSubmit={handleSubmit}
-            className="bg-gray-50 p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg"
+            className="bg-white p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-md border border-neutral-200"
           >
             <div className="space-y-4 sm:space-y-6">
               <div>
@@ -191,7 +191,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-500 to-purple-600 text-white font-bold text-base sm:text-lg rounded-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+                className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-600 via-secondary-600 to-primary-600 text-white font-bold text-base sm:text-lg rounded-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-300 shadow-lg"
               >
                 Enviar Mensagem
               </button>

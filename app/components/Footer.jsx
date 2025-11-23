@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-white pt-12 sm:pt-16 pb-6 sm:pb-8">
+    <footer className="bg-gradient-to-b from-neutral-900 to-neutral-950 text-white pt-12 sm:pt-16 pb-6 sm:pb-8">
       <div className="container-custom px-4">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 pb-8 sm:pb-12 border-b border-white/10">
@@ -29,7 +29,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/10 hover:bg-primary-500 flex items-center justify-center text-lg sm:text-xl transition-all duration-300 hover:-translate-y-1"
+                  className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white/5 hover:bg-gradient-to-br hover:from-primary-500 hover:to-secondary-500 flex items-center justify-center text-lg sm:text-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-white/10 hover:border-primary-400"
                 >
                   <social.icon />
                 </a>

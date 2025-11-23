@@ -31,10 +31,10 @@ export default function WhatsAppButton() {
           exit={{ scale: 0, opacity: 0 }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="fixed bottom-8 right-8 z-50 w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 transition-colors group"
+          className="fixed bottom-8 right-8 z-50 w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 text-white rounded-full flex items-center justify-center text-3xl shadow-2xl hover:shadow-green-500/50 hover:scale-110 transition-all group"
         >
-          <FaWhatsapp className="group-hover:scale-110 transition-transform" />
-          <span className="absolute -top-12 right-0 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+          <FaWhatsapp className="group-hover:rotate-12 transition-transform" />
+          <span className="absolute -top-12 right-0 bg-neutral-900 text-white px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl">
             Fale comigo no WhatsApp
           </span>
         </motion.a>

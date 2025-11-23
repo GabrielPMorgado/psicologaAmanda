@@ -37,7 +37,7 @@ export default function Services() {
   ]
 
   return (
-    <section id="servicos" className="py-12 sm:py-16 md:py-20 bg-white">
+    <section id="servicos" className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white via-primary-50/30 to-white">
       <div className="container-custom px-4">
         {/* Header */}
         <motion.div
@@ -46,10 +46,10 @@ export default function Services() {
           viewport={{ once: true }}
           className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-3 sm:mb-4">
             Serviços Oferecidos
           </h2>
-          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full mb-4 sm:mb-6"></div>
+          <div className="w-16 sm:w-20 h-1.5 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-600 mx-auto rounded-full shadow-lg mb-4 sm:mb-6"></div>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
             Atendimento especializado com abordagens baseadas em evidências científicas
           </p>
@@ -64,18 +64,18 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-50 p-6 sm:p-8 rounded-xl sm:rounded-2xl text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 hover:bg-white border-2 border-transparent hover:border-primary-500 group"
+              className="bg-white p-6 sm:p-8 rounded-xl sm:rounded-2xl text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 border border-neutral-200 hover:border-primary-300 group"
             >
               {/* Icon */}
-              <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 bg-gradient-to-br from-primary-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl sm:text-3xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 bg-gradient-to-br from-primary-500 via-secondary-500 to-primary-600 rounded-2xl flex items-center justify-center text-white text-2xl sm:text-3xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
                 {service.icon}
               </div>
               
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
+              <h3 className="text-lg sm:text-xl font-bold text-neutral-900 mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors">
                 {service.title}
               </h3>
               
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-neutral-600 leading-relaxed">
                 {service.description}
               </p>
             </motion.div>
